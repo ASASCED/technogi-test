@@ -1,0 +1,10 @@
+{% set submitButtonHTML = '<input type="submit" value="Log In"/>' %}
+{% set loginHeaderText = 'Log In' %}
+{% set isAdminLogin = true %}
+{% set totalSiteLogins = '2.00' %}
+
+<form type="submit">
+    <h1>{%- if isAdminLogin -%}ADMIN | {%- endif -%}{{loginHeaderText}}</h1>
+    <span>Total Logins: {{totalSiteLogins|round}}</span>
+    {{submitButtonHTML | raw}}
+</form>
